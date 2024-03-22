@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="ng.ico" type="image/x-icon">
+    <title>Nasheeds Graffiti - Login to continue</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: rgba(87, 87, 87, 0.475);
+            /* Dark background color */
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: grey;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgb(82, 82, 82);
+            /* Darker color on hover */
+        }
+
+        body {
+            background-color: #2e3641;
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .cont {
+            border: 2px solid white;
+            border-radius: 12px;
+            width: 42vw;
+            height: 37vw;
+            margin: auto;
+            color: white;
+        }
+
+        nav {
+            background-color: #424e5e;
+            height: 81px;
+            margin-bottom: 38px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: black;
+            font-weight: 600;
+        }
+
+
+        .ahrefs {
+            margin-top: -9px;
+            margin-left: 8px;
+        }
+
+        .navlogo img {
+            height: 63px;
+            width: 136px;
+            bottom: -8px;
+            position: relative;
+            margin-left: 11px;
+        }
+
+
+        .ahrefs a {
+            margin-right: 15px;
+            padding: 6px 12px;
+            border-radius: 13px;
+            color: white;
+            bottom: -9px;
+            position: relative;
+        }
+
+        .sign a {
+            background-color: rgba(128, 128, 128, 0.32);
+            border-radius: 13px;
+        }
+
+        .ahrefs a:hover {
+            background-color: rgba(128, 128, 128, 0.32);
+            transition: all 0.4s;
+        }
+
+        .name {
+            display: flex;
+            justify-content: center;
+            margin: 12px;
+            cursor: pointer;
+        }
+
+        input {
+            border-radius: 6px;
+            border-radius: 6px;
+            width: 34vw;
+            right: -26.4px;
+            position: relative;
+            height: 3vw;
+            border: 1px solid whitesmoke;
+            font-family: "Poppins", sans-serif;
+            font-weight: 450;
+            padding: 3px 25px;
+        }
+
+        input:focus-visible {
+            border-color: green;
+        }
+
+        .h_one {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 14px;
+            color: gray;
+        }
+
+        button {
+            width: 459px;
+            position: relative;
+            font-family: "Poppins", sans-serif;
+            padding: 2px 12px;
+            right: -40px;
+            bottom: -34px;
+            background: blue;
+            border: 2px solid blue;
+            color: white;
+            font-weight: 600;
+            height: 35px;
+            border-radius: 24px;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: rgba(0, 0, 255, 0.63);
+            transition: all 0.6s;
+        }
+
+        input.error {
+            border-color: red;
+        }
+
+        .error-message {
+            right: -27px;
+            color: red;
+            font-size: 13px;
+            margin-top: -29px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            .cont {
+                width: 80vw;
+            }
+        }
+
+        /* Navigation bar */
+        nav {
+            background-color: #424e5e;
+            height: 81px;
+            margin-bottom: 38px;
+        }
+
+        /* Navigation bar flexbox */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Navigation links */
+        .navbar a {
+            text-decoration: none;
+            color: black;
+            font-weight: 600;
+        }
+
+        /* Navigation logo */
+        .navlogo img {
+            height: 63px;
+            width: 136px;
+            bottom: -8px;
+            position: relative;
+            margin-left: 11px;
+        }
+
+        /* Responsive logo size for smaller screens */
+        @media (max-width: 768px) {
+            .navlogo img {
+                height: 40px;
+                width: 80px;
+            }
+        }
+
+        /* Navigation links */
+        .ahrefs a {
+            margin-right: 15px;
+            padding: 6px 12px;
+            border-radius: 13px;
+            color: white;
+            bottom: -9px;
+            position: relative;
+        }
+
+        /* Sign up link */
+        .sign a {
+            background-color: rgba(128, 128, 128, 0.32);
+            border-radius: 13px;
+        }
+
+        /* Navigation link hover effect */
+        .ahrefs a:hover {
+            background-color: rgba(128, 128, 128, 0.32);
+            transition: all 0.4s;
+        }
+
+        /* Username display */
+        .name {
+            display: flex;
+            justify-content: center;
+            margin: 12px;
+            cursor: pointer;
+        }
+
+        /* Search bar */
+        input {
+            border-radius: 6px;
+            width: 34vw;
+            border: 1px solid whitesmoke;
+            font-family: "Poppins", sans-serif;
+            font-weight: 450;
+            padding: 3px 25px;
+        }
+
+        /* Responsive search bar width for smaller screens */
+        @media (max-width: 768px) {
+            input {
+                width: 60vw;
+            }
+        }
+
+        /* Search bar focus effect */
+        input:focus-visible {
+            border-color: green;
+        }
+
+        /* Headline */
+        .h_one {
+            display: flex;
+            justify-content: center;
+        }
+
+        .h_one {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 14px;
+            color: gray;
+        }
+
+        /* Button */
+        button {
+            font-family: "Poppins", sans-serif;
+            padding: 2px 12px;
+            background: blue;
+            border: 2px solid blue;
+            color: white;
+            font-weight: 600;
+            height: 35px;
+            border-radius: 24px;
+            font-size: 16px;
+        }
+
+        /* Responsive button positioning for smaller screens */
+        @media (max-width: 768px) {
+            button {
+                width: 64vw;
+                height: 7vw;
+                margin: auto;
+            }
+
+            /* Button hover effect */
+            button:hover {
+                background-color: rgba(0, 0, 255, 0.63);
+                transition: all 0.6s;
+            }
+
+            .cont {
+                width: 85vw;
+                height: 100vw;
+            }
+
+            /* Input error handling */
+            input.error {
+                border: 2px solid #b3261e;
+                border-color: #b3261e;
+            }
+
+            /* Error message */
+            .error-message {
+                right: -27px;
+                color: red;
+                font-size: 11px;
+                margin-top: -27px;
+                position: relative;
+            }
+
+            .ahrefs a {
+                margin-right: 1px;
+                padding: 6px 12px;
+                border-radius: 13px;
+                color: white;
+                bottom: -9px;
+                position: relative;
+                font-size: 12px;
+            }
+
+            nav {
+                background-color: #424e5e;
+                height: 57px;
+                margin-bottom: 38px;
+            }
+
+            .navlogo img {
+                height: 44px;
+                width: 85px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="navlogo">
+                <img src="https://nasheedify.vercel.app/images/ng-logo.png" alt="nasheeds_logo">
+            </div>
+
+            <div class="ahrefs">
+                <span class="sign"><a href="">Log in</a></span>
+                <a href="">Sign up</a>
+            </div>
+        </div>
+    </nav>
+    <div class="cont">
+        <div class="form">
+            <div class="h_one">
+                <h1>Login</h1>
+            </div>
+            <form id="loginForm" onsubmit="event.preventDefault(); validateForm();">
+                <div class="name">
+                    First Name
+                </div>
+                <input type="text" name="firstName" id="firstName">
+                <div class="name">
+                    Last Name
+                </div>
+                <input type="text" name="lastName" id="lastName">
+                <div class="name">
+                    Input Email
+                </div>
+                <input type="email" name="email" id="email">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Get references to form elements
+        const emailInput = document.getElementById('email');
+        const submitButton = document.querySelector('button');
+
+        // Function to validate email format
+        function validateEmail(email) {
+            const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(String(email).toLowerCase());
+        }
+
+        // Add event listener to submit button
+        submitButton.addEventListener('click', (event) => {
+            // Prevent default form submission
+            event.preventDefault();
+
+            // Clear any previous error messages
+            const errorMessages = document.querySelectorAll('.error-message');
+            errorMessages.forEach(message => message.remove());
+
+            // Check if email is empty
+            if (emailInput.value === '') {
+                showError('Email is a required field', emailInput);
+                return;
+            }
+
+            // Validate email format
+            if (!validateEmail(emailInput.value)) {
+                showError('Please enter a valid email address', emailInput);
+                return;
+            }
+
+            // If validation passes, simulate form submission (replace this with your actual submission logic)
+            alert('Form submitted successfully!');
+        });
+
+        // Function to display error message
+        function showError(message, input) {
+            const errorMessage = document.createElement('div');
+            errorMessage.classList.add('error-message');
+            errorMessage.textContent = message;
+            input.parentElement.appendChild(errorMessage);
+            input.classList.add('error'); // Add error class to input for red border
+        }
+
+    </script>
+</body>
+
+</html>
