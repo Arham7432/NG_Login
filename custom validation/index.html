@@ -8,8 +8,7 @@
     <title>Nasheeds Graffiti - Login to continue</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-        ::-webkit-scrollbar {
+::-webkit-scrollbar {
             width: 8px;
         }
 
@@ -246,13 +245,6 @@
             padding: 3px 25px;
         }
 
-        /* Responsive search bar width for smaller screens */
-        @media (max-width: 768px) {
-            input {
-                width: 60vw;
-            }
-        }
-
         /* Search bar focus effect */
         input:focus-visible {
             border-color: green;
@@ -279,16 +271,22 @@
             border: 2px solid blue;
             color: white;
             font-weight: 600;
-            height: 35px;
+            height: 3vw;
             border-radius: 24px;
             font-size: 16px;
         }
 
         /* Responsive button positioning for smaller screens */
         @media (max-width: 768px) {
+            input {
+                width: 60vw;
+                height: 6.5vw;
+            }
+
             button {
+                top: 21px;
                 width: 64vw;
-                height: 7vw;
+                height: 8vw;
                 margin: auto;
             }
 
@@ -300,7 +298,7 @@
 
             .cont {
                 width: 85vw;
-                height: 100vw;
+                height: 110vw;
             }
 
             /* Input error handling */
@@ -339,7 +337,14 @@
                 width: 85px;
             }
         }
-    </style>
+
+        @media (max-width: 380px) {
+            input {
+                width: 57vw;
+                height: 6.5vw;
+            }
+        }
+            </style>
 </head>
 
 <body>
